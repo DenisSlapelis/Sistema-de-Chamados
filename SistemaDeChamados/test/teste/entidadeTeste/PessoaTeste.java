@@ -14,13 +14,14 @@ public class PessoaTeste {
     public PessoaTeste() {
     }
     
-      @Test
+    @Test
     public void instanciacaoTest(){
         Pessoa p = new Pessoa("Denis", 998877665);
         Assert.assertEquals(998877665, p.getTelefone());
         Assert.assertEquals("Denis", p.getNome());
     }
     
+    @Test
     public void settersTest(){
         Pessoa p = new Pessoa("Denis", 998877665);
         Assert.assertEquals(998877665, p.getTelefone());
