@@ -27,8 +27,8 @@ public class RegistroChamadoTeste {
 
         RegistroChamado rc = new RegistroChamado("Problema de Rede", c, t);
         Assert.assertEquals("Problema de Rede", rc.getAssunto());
-        Assert.assertEquals(t, rc.getTecnico());
         Assert.assertEquals(c, rc.getChamado());
+        Assert.assertEquals(t, rc.getTecnico());
     }
     
     @Test(expected = Exception.class)
