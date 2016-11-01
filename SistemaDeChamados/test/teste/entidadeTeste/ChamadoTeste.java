@@ -24,7 +24,7 @@ public class ChamadoTeste {
     }
     
     @Test
-    public void InstanciacaoTest() {
+    public void InstanciacaoProblemaDeRedeTest() {
         Empresa e = new Empresa(0001, "Mackenzie");
         Pessoa p = new Pessoa("Denis", 998877665);
         Tecnico t = new Tecnico("DenisT", 900112233);
@@ -33,6 +33,21 @@ public class ChamadoTeste {
                 1, t, ce, "Windows", "8", "Banda larga", "192.168.1.1");
         
         Assert.assertEquals(331, c.getCodigo());
+        Assert.assertEquals("Problema de Rede", c.getTitulo());
+        Assert.assertEquals("Internet nao esta funcionando", c.getDescricao());
+        Assert.assertEquals(1, c.getPrioridade());
+        Assert.assertEquals(t, c.getTecnico());
+        Assert.assertEquals(ce, c.getCliente());
+        Assert.assertEquals("Windows", c.getSistemaOperacional());
+        Assert.assertEquals("8", c.getVersaoSO());
+        Assert.assertNotNull(c.getData());
+        Assert.assertNotNull(c.getHora());
+        Assert.assertEquals("Banda larga", c.getTipoConexao());
+        Assert.assertEquals("192.168.1.1",c.getEnderecoRede());
+        Assert.assertEquals("Iniciado", c.getStatus());
+        Assert.assertEquals("Problema de Rede", c.getTipoProblema());
     }
     
-}
+    
+    }
+
