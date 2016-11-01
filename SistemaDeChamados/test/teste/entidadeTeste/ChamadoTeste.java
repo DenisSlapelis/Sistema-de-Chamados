@@ -94,6 +94,33 @@ public class ChamadoTeste {
         Assert.assertEquals("Ubuntu", c.getVersaoSO());
         Assert.assertEquals("Wi-fi", c.getTipoConexao());
         Assert.assertEquals("221.000.0.0", c.getEnderecoRede());
+        
     }
+
+    @Test(expected = Exception.class)
+    public void alterarChamadoDadosInvalido() throws Exception {
+        Tecnico tecnico = new Tecnico("Diego", 567);
+        Empresa empresa = new Empresa(123, "Samsung");
+        ClienteEmpresa clienteEmpresa = new ClienteEmpresa(1, empresa, 2197534L, "Denis", 123);
+        Chamado c = new Chamado("Título", "Descrição", 2, tecnico, clienteEmpresa, "Linux", "minix", "Oracle");
+        c.setBancoDeDados(null);
+        c.setCausaProblema(null);
+        c.setCliente(null);
+        c.setCodigo(-1);
+        c.setData(null);
+        c.setDescricao(null);
+        c.setEnderecoRede(null);
+        c.setHora(null);
+        c.setPrioridade(-1);
+        c.setSistemaOperacional(null);
+        c.setSolucaoProblema(null);
+        c.setStatus(null);
+        c.setTecnico(null);
+        c.setTipoConexao(null);
+        c.setTipoProblema(null);
+        c.setTitulo(null);
+        c.setVersaoSO(null);
+    }    
+    
 
 }
